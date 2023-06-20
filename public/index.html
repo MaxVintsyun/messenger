@@ -9,7 +9,49 @@
 </head>
 
 <body>
-   <h1>Yo</h1> 
+    <main>
+        <div class="app">
+            <div class="screen join-screen active"></div>
+            <div class="form">
+                <h2 class="form__title">Войти в чат</h2>
+                <form class="form__container">
+                    <label class="username"></label>
+                    <input class="username__input" type="text" id="username">
+                </form>
+                <button class="form__join-button">Войти</button>
+            </div>
+            <div class="screen chat-screen">
+                <div class="chat-screen__header">
+                    <h1 class="chat-screen__logo">Чат</h1>
+                    <button class="chat-screen__exit" id="exit-chat"></button>
+                </div>
+                <div class="chat-screen__messages">
+                    <div class="message user-message">
+                        <div>
+                            <div class="name">You</div>
+                            <div class="text">hi</div>
+                        </div>
+                    </div>
+                    <div class="update">
+                        ABC вошел в чат
+                    </div>
+                    <div class="message other-message">
+                        <div>
+                            <div class="name">You</div>
+                            <div class="text">hi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="typebox">
+                <input class="typebox__input" type="text" id="message-input">
+                <button id="send-message">Отправить</button>
+            </div>
+        </div>
+        <div class="screen chat-screen"></div>
+    </main>
+    <script src="/node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
