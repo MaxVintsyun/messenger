@@ -11,38 +11,22 @@
 <body class="page">
     <main>
         <div class="app">
-            <div class="screen join-screen">
+            <div class="screen join-screen screen_active">
                 <div class="form">
                     <h2 class="form__title">Войти в чат</h2>
                     <form class="form__container">
                         <label class="username">Имя пользователя</label>
-                        <input class="username__input" type="text" id="username">
+                        <input class="username__input" type="text" id="username" required>
                     </form>
                     <button class="form__join-button">Войти</button>
                 </div>
             </div>
-            <div class="screen chat-screen screen_active">
+            <div class="screen chat-screen">
                 <div class="chat-screen__header">
                     <h1 class="chat-screen__logo">Чат</h1>
                     <button class="chat-screen__exit" id="exit-chat">Выйти</button>
                 </div>
-                <div class="chat-screen__messages">
-                    <!-- <div class="message your-message">
-                        <div class="user-message">
-                            <div class="name">You</div>
-                            <div class="text">hi</div>
-                        </div>
-                    </div>
-                    <div class="chat-screen__update">
-                        ABC вошел в чат
-                    </div>
-                    <div class="message other-message">
-                        <div class="user-message">
-                            <div class="user-message__name">You</div>
-                            <div class="user-message__text">hi</div>
-                        </div>
-                    </div> -->
-                </div>
+                <div class="chat-screen__messages"></div>
                 <div class="typebox">
                     <input class="typebox__input" type="text" id="message-input">
                     <button class="typebox__send" id="send-message">Отправить</button>
@@ -52,7 +36,21 @@
         </div>
         <div class="screen chat-screen"></div>
     </main>
-    <script src="/node_modules/socket.io/client-dist/socket.io.js"></script>
+
+    <template id="message-template">
+        <div class="message">
+            <div class="user-message">
+                <div class="user-message__name"></div>
+                <div class="user-message__text"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="entered-chat">
+        <div class="chat-screen__update"></div>
+    </template>
+
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
     <script src="./script.js"></script>
 </body>
 
