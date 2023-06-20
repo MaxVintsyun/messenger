@@ -2,51 +2,53 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="./pages/style.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messenger</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
 </head>
 
-<body>
+<body class="page">
     <main>
         <div class="app">
-            <div class="screen join-screen active"></div>
-            <div class="form">
-                <h2 class="form__title">Войти в чат</h2>
-                <form class="form__container">
-                    <label class="username"></label>
-                    <input class="username__input" type="text" id="username">
-                </form>
-                <button class="form__join-button">Войти</button>
+            <div class="screen join-screen">
+                <div class="form">
+                    <h2 class="form__title">Войти в чат</h2>
+                    <form class="form__container">
+                        <label class="username">Имя пользователя</label>
+                        <input class="username__input" type="text" id="username">
+                    </form>
+                    <button class="form__join-button">Войти</button>
+                </div>
             </div>
-            <div class="screen chat-screen">
+            <div class="screen chat-screen screen_active">
                 <div class="chat-screen__header">
                     <h1 class="chat-screen__logo">Чат</h1>
-                    <button class="chat-screen__exit" id="exit-chat"></button>
+                    <button class="chat-screen__exit" id="exit-chat">Выйти</button>
                 </div>
                 <div class="chat-screen__messages">
-                    <div class="message user-message">
-                        <div>
+                    <!-- <div class="message your-message">
+                        <div class="user-message">
                             <div class="name">You</div>
                             <div class="text">hi</div>
                         </div>
                     </div>
-                    <div class="update">
+                    <div class="chat-screen__update">
                         ABC вошел в чат
                     </div>
                     <div class="message other-message">
-                        <div>
-                            <div class="name">You</div>
-                            <div class="text">hi</div>
+                        <div class="user-message">
+                            <div class="user-message__name">You</div>
+                            <div class="user-message__text">hi</div>
                         </div>
-                    </div>
+                    </div> -->
+                </div>
+                <div class="typebox">
+                    <input class="typebox__input" type="text" id="message-input">
+                    <button class="typebox__send" id="send-message">Отправить</button>
                 </div>
             </div>
-            <div class="typebox">
-                <input class="typebox__input" type="text" id="message-input">
-                <button id="send-message">Отправить</button>
-            </div>
+
         </div>
         <div class="screen chat-screen"></div>
     </main>

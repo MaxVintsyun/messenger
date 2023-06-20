@@ -1,0 +1,7 @@
+.form__title {
+    margin-bottom: 20px;
+    font-size: 30px;
+    border-bottom: 4px solid #555;
+    padding: 5px 0;
+    display: inline-block;
+}

@@ -1,0 +1,7 @@
+.username__input {
+    max-width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    font-size: 16px;
+    border-radius: 5px;
+}

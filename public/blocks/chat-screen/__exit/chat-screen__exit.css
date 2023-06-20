@@ -1,0 +1,10 @@
+.chat-screen__exit {
+    padding: 5px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
